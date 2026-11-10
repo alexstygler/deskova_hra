@@ -14,6 +14,9 @@
     .label { color: #526756; font-size: .85rem; text-transform: uppercase; letter-spacing: .09em; }
     li { margin: 8px 0; }
     footer { color: #526756; font-size: .9rem; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #d8dfd3; }
   </style>
 </head>
 <body>
@@ -27,8 +30,8 @@
       <h2>Current focus</h2>
       <p>Discover the experience this game should offer through one focused design question at a time. The creative direction should come mainly from the designer’s own ideas.</p>
       <p><strong>Decided:</strong> actions taken for your own benefit may disadvantage others; avoid actions whose main purpose is to damage someone. Target about 40 minutes for 2–4 players and no more than about 50 minutes at nine.</p>
-      <p><strong>Next focus:</strong> Explore the rhythm of a round.</p>
-      <p><strong>Next question:</strong> How does this sound: everyone secretly chooses an action at the same time, reveals together, and then resolves what happens? Would that be enjoyable, or is reacting to each individual move as it happens important?</p>
+      <p><strong>Next focus:</strong> Compare ways to keep everyone involved. Simultaneous secret choices sound enjoyable to the designer because they reduce waiting; alternatives are still wanted.</p>
+      <p><strong>Next question:</strong> Which round structure would you most like to try in a tiny example first?</p>
     </section>
     <section>
       <h2>Design brief — agreed preferences</h2>
@@ -111,9 +114,25 @@
     <section>
       <h2>Ideas to explore — not decisions</h2>
       <p>Simultaneous choices, fixed rounds, shared events, and interaction with a limited number of opponents are possible ways to reduce waiting. None has been chosen. The earlier negotiation idea has been set aside because it conflicts with the stated preferences.</p>
-      <p><strong>Current suggestion to explore:</strong> simultaneous private action selection followed by a shared reveal. This could reduce waiting and create opportunities to anticipate others. It is not yet a decision. Resolution must also scale well; simultaneous selection alone does not guarantee the session-length target.</p>
+      <p><strong>Promising option:</strong> simultaneous private action selection followed by a shared reveal. The designer finds this enjoyable because everyone can choose without waiting through individual turns, and wants to explore alternatives before selecting a structure. Resolution must also scale well; simultaneous selection alone does not guarantee the session-length target.</p>
       <p>Theme, core mechanics, victory conditions, and the exact rules complexity are still open. Session-length targets are recorded above.</p>
       <p><strong>Design challenge to test later:</strong> give beginners a reasonable chance and allow recovery from mistakes while keeping luck low and skilled decisions meaningful. Also keep interaction readable at nine players without requiring everyone to track eight opponents in detail.</p>
+    </section>
+    <section>
+      <h2>Round structures to explore — not final rules</h2>
+      <p>These are assistant-proposed structures for comparison. They can be adapted or combined as the designer develops the game’s own central activity.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Structure</th><th scope="col">What players do</th><th scope="col">What to test</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Secret choice, shared reveal</th><td>Everyone privately commits to an action, then reveals together. Outcomes depend partly on the combination of choices.</td><td>Anticipating opponents could be satisfying. Collisions need fair, quick resolution and useful alternatives; nine separate resolutions could still be slow.</td></tr>
+            <tr><th scope="row">Shared opportunity, individual responses</th><td>Reveal one common situation or set of options. Everyone simultaneously decides how to use it for their own position.</td><td>A common prompt can keep rounds short, but players’ responses must affect shared opportunities or rewards to preserve meaningful interaction.</td></tr>
+            <tr><th scope="row">Choose and pass</th><td>Each player chooses one option from a small personal set, then passes the remaining options to a neighbor. Repeat together.</td><td>Choices influence what others receive. Keep the number of selections bounded as player count increases; check whether interaction feels too limited to neighbors.</td></tr>
+            <tr><th scope="row">One player leads, everyone responds</th><td>A rotating lead player chooses an action category. Everyone gets a related action or response, with a possible advantage for the leader.</td><td>Everyone participates in each turn. Nine lead turns per cycle could still extend play too much; total action count and fair access to leading need testing.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>All simultaneous structures can still wait for the slowest decision. Test both selection time and resolution time, while leaving room for conversation.</p>
     </section>
     <section>
       <h2>Roadmap — for reference</h2>
@@ -128,6 +147,7 @@
     </section>
     <section>
       <h2>Decision log</h2>
+      <p><time datetime="2026-11-10">10 November 2026</time> — The designer likes simultaneous secret choices and shared reveal because of the reduced waiting, and requests alternatives. Recorded four structures for comparison without selecting final rules. Next focus: choose one structure to experience through a tiny example.</p>
       <p><time datetime="2026-11-10">10 November 2026</time> — Confirmed that finding non-obvious solutions, anticipating others, and making effective unexpected combinations all appeal. No ranking was chosen. Next focus: explore simultaneous selection and shared reveal as a possible round structure, without committing to it.</p>
       <p><time datetime="2026-11-10">10 November 2026</time> — Chose a little of both random opportunities and uncertain action outcomes. Preserve the earlier preference for low overall luck; exact implementation remains open. Next focus: identify what should make a move feel satisfying before developing concrete concepts.</p>
       <p><time datetime="2026-11-10">10 November 2026</time> — Refined the harm boundary: taking an action for your own benefit may harm others as a consequence; avoid actions whose main purpose is intentionally damaging someone. This supersedes the earlier blanket restriction on harm to earned progress. Set the 2–4-player target at about 40 minutes, implying about 50 minutes maximum at nine under the original scaling goal. Next focus: where randomness belongs.</p>
