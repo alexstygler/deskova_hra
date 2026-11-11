@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Board game — project notebook</title>
+  <title>A Search Tonight — project notebook</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, sans-serif; color: #24332d; background: #f5f3eb; }
     body { max-width: 850px; margin: auto; padding: 36px 20px 64px; line-height: 1.65; }
@@ -17,15 +17,354 @@
     .table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; }
     th, td { text-align: left; vertical-align: top; padding: 10px; border-bottom: 1px solid #d8dfd3; }
+    h3 { line-height: 1.3; }
+    a { color: #245e45; }
+    nav { line-height: 2; }
+    details { margin: 16px 0; }
+    summary { cursor: pointer; font-weight: 650; }
+    details[open] > summary { margin-bottom: 16px; }
+    pre.research-prompt { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.65; padding: 16px; background: #f1f4ed; border-radius: 8px; }
+    #archive { padding: 22px; border: 1px solid #d8dfd3; border-radius: 12px; }
+    @media (max-width: 550px) { section, #archive { padding: 16px; } th, td { padding: 8px; } }
   </style>
 </head>
 <body>
   <header>
-    <p class="label">Working notebook · title to be decided</p>
-    <h1>Let’s make a board game.</h1>
-    <p>A shared record of our conclusions, experiments, and next steps.</p>
+    <p class="label">Working notebook · A Search Tonight</p>
+    <h1>A Search Tonight</h1>
+    <p>Our Kilmainham Gaol board-game notebook: decisions, proposals, research, and next steps.</p>
+    <p>Last updated <time datetime="2026-11-12">12 November 2026</time> · working title · no playable prototype yet</p>
+    <nav aria-label="Notebook sections"><a href="#current">Current idea</a> · <a href="#goals">Goals</a> · <a href="#concept">Open rules</a> · <a href="#history">History</a> · <a href="#alternatives">Alternatives</a> · <a href="#research">Research</a> · <a href="#research-prompt">Research prompt</a> · <a href="#decisions">Decisions</a> · <a href="#archive">Archive</a></nav>
   </header>
   <main>
+    <section class="focus" id="current">
+      <p class="label">Current direction · updated 12 November 2026</p>
+      <h2>A Search Tonight</h2>
+      <p><strong>Confirmed choice:</strong> the designer selected <em>A Search Tonight</em>, set in Kilmainham Gaol, as the leading concept. This is a working title and an early direction, not a finished or tested game.</p>
+      <p><strong>Setting:</strong> the prison while it was functioning, with its architecture, people, routines, and history shaping play. The museum/exhibition approach was explicitly rejected.</p>
+      <p><strong>Historical possibilities:</strong> Parnell’s imprisonment and the Kilmainham agreement of 1882, or imprisonment following the Easter Rising of 1916. The scenario and period have not been selected.</p>
+      <p><strong>Core idea:</strong> an inspection is approaching, but players have incomplete information about its target, timing, or conditions. They pursue individual objectives while deciding how much limited effort to spend becoming better informed and how much to commit to making progress.</p>
+      <p><strong>Central decision to explore:</strong> “Spend effort on a clue and make a smaller attempt, or commit more effort with incomplete information?” This is a proposed decision structure, not a settled action sequence.</p>
+      <p><strong>Next focus:</strong> research the closest competitors using the prompt below. The next design step is to define prisoners’ individual objectives and the limited opportunities they compete for, then describe one complete provisional round.</p>
+      <p>No playable prototype, age rating, pacing result, sales forecast, or originality claim has been validated.</p>
+    </section>
+
+    <section id="goals">
+      <h2>Design goals we are carrying forward</h2>
+      <ul>
+        <li><strong>Approximately 2–9 players, each playing for themselves.</strong> Target about 40 minutes at 2–4 players and no more than about 50 minutes at nine. Measure decision and resolution time separately.</li>
+        <li><strong>Simple rules with depth:</strong> roughly Splendor as a rules-complexity reference; quick to explain, with several viable strategies and interesting choices from the beginning.</li>
+        <li><strong>Other players matter:</strong> their pursuit of opportunities changes your options, giving you reasons to adapt. Avoid an isolated puzzle against the guards.</li>
+        <li><strong>Mixed public and private information;</strong> simultaneous decisions are a preferred direction for reducing waiting. Neither guarantees fast resolution by itself.</li>
+        <li><strong>Limited luck:</strong> a little randomness in available opportunities and outcomes is welcome, but decisions should dominate. Setbacks should remain recoverable.</li>
+        <li><strong>Comfortable social play:</strong> room for casual conversation, without required trading or negotiation. Avoid constant time pressure, excessive memorization, and players sitting out.</li>
+        <li><strong>Competition through self-benefit:</strong> an action may disadvantage others as a consequence of helping yourself. Avoid actions mainly intended to damage someone, repeated victimization, and player-controlled traitors.</li>
+        <li><strong>Satisfying decisions:</strong> finding non-obvious solutions, anticipating opponents, and making effective combinations all appeal. No priority order has been selected.</li>
+        <li><strong>Audience hypothesis:</strong> adult and teenage appeal, with possible accessibility to families with children around 10+. This is untested; no final minimum age has been chosen.</li>
+        <li><strong>Physical quality:</strong> satisfying components, with Splendor’s chips as a tactile reference. No component list or budget is fixed.</li>
+        <li><strong>User-led originality:</strong> the designer’s ideas should shape the game. Reference games illustrate enjoyable experiences; borrowing their mechanics is optional.</li>
+      </ul>
+      <p><strong>References:</strong> Splendor, Azul, City of the Great Machine, chess, Rubik’s Cube solving, and Texas Hold’em. The designer particularly likes logical decisions and responding to opponents, and dislikes repetitive compulsory buildup. Colt Express was mentioned by an external report, not named by the designer as a favorite.</p>
+      <p><strong>How we work:</strong> explore one focused topic at a time; record conclusions; distinguish confirmed preferences from proposals; finish each topic with the next focus. An HTML notebook, later including a web prototype and design experiments, is the agreed working format.</p>
+    </section>
+
+    <section id="concept">
+      <h2>Search Tonight — proposals and open questions</h2>
+      <p>Fictional prisoners or supporting characters could operate within a historically grounded scenario. The guards and inspections would be controlled by the game system. A player-controlled traitor is outside the current direction.</p>
+      <h3>Possible individual objectives</h3>
+      <ul>
+        <li>Get a message to an outside contact.</li>
+        <li>Obtain access to a useful location or contact.</li>
+        <li>Protect or move a document before a search.</li>
+        <li>Combine information, access, and timing to complete a private plan.</li>
+      </ul>
+      <p>These are examples, not adopted objective cards. Escape is not currently the central objective. Scoring and victory conditions remain undecided.</p>
+      <h3>Questions that determine the game</h3>
+      <ul>
+        <li>Which historical period and player roles are we using?</li>
+        <li>What does each player want, and why do they need the same limited opportunities?</li>
+        <li>What clues exist, who sees them, and how does obtaining information compete with acting?</li>
+        <li>How do inspections resolve, and how can a player recover after an unsuccessful attempt?</li>
+        <li>What are the map, movement, capacity, action sequence, ties, round count, and resource-recovery rules?</li>
+        <li>How do we scale opportunities and resolution to nine players?</li>
+      </ul>
+      <h3>Earlier mechanics available for testing</h3>
+      <p>During the opportunity-boom exploration, the designer preferred choosing an opportunity and secretly committing a limited resource, with a higher commitment winning and all commitments spent in the explained example. A known risk of no reward and a mixture of automatic and chosen extra recovery also appealed.</p>
+      <p><strong>Status in Search Tonight:</strong> those are inherited ideas to evaluate, not automatically adopted prison rules. Exact effort spending, recovery, and the role of auctions are unresolved. Splitting bids across several locations was discussed by the external research report, not selected as our rule.</p>
+      <h3>What to measure in a prototype</h3>
+      <ul>
+        <li>Run the same core structure at four and nine players; separate time spent deciding from time spent resolving.</li>
+        <li>Count full rounds with no progress or reward, particularly consecutive ones.</li>
+        <li>Observe whether clues support reasoning rather than constant memory work or unexplained guessing.</li>
+        <li>Check whether opponents influence choices without enabling repeated targeting.</li>
+        <li>Check newcomers’ independent decisions, recovery after mistakes, and enjoyment; audience and pacing targets remain hypotheses.</li>
+      </ul>
+    </section>
+
+    <section id="history">
+      <h2>Kilmainham and historical inspiration</h2>
+      <p><strong>Historical framing:</strong> the Kilmainham Treaty was an informal political understanding in 1882, rather than a formal treaty signed in a prison ceremony. Kilmainham’s role in the 1916 setting concerns the aftermath of the Easter Rising. Keep these periods separate and verify specific movements, contacts, routines, and events before turning them into rules.</p>
+      <p>Fictional supporting characters and invented gameplay situations should be identified as such. A simplified real layout is a possible inspiration, not a committed full-building simulation.</p>
+      <details>
+        <summary>Eight Kilmainham approaches explored — only Search Tonight selected as the lead</summary>
+        <ol>
+          <li><strong>An Agreement Without a Table, 1882:</strong> combine limited opportunities and influence into proposals meeting changing political conditions; represent negotiations through rules without mandatory player bargaining.</li>
+          <li><strong>Four Channels to the Outside, 1882:</strong> combine access to visitors, correspondence, allies, and the press to get information or requests through.</li>
+          <li><strong>Tomorrow’s Front Page, 1882:</strong> acquire reports and assemble a newspaper under space and deadline constraints. The prison is the story’s center, but most player activity is outside.</li>
+          <li><strong>The Land War Through the Walls, 1882:</strong> connect a prison hub to communities and political institutions through short projects. Scope and complexity would need tight limits.</li>
+          <li><strong>The Courtyard Window, post-1916:</strong> pursue private objectives through a shared map and prison timetable.</li>
+          <li><strong>A Search Tonight:</strong> gather clues or act under uncertainty before inspections. Selected by the designer as the clear winner; the historical scenario remains open.</li>
+          <li><strong>Before the Transfer:</strong> arrange messages, belongings, contacts, and objectives before a shared deadline.</li>
+          <li><strong>At the Final Bell:</strong> a clearly fictional alternate-history escape prepared for a final window, keeping everyone involved until the end.</li>
+        </ol>
+        <p>The assistant preferred Search Tonight over Prague for this brief because of the information-versus-progress decision and potential shared resolution. Prague retained an advantage in immediate visual clarity and moving components. Those are design judgments, not playtest results.</p>
+      </details>
+      <details>
+        <summary>The designer’s historical interests</summary>
+        <ul>
+          <li>The Hittites: early ironworking, conflict with Egypt, and their famous peace treaty. Avoid treating “invention of iron” or “first-ever treaty” as established claims.</li>
+          <li>The Polish–Lithuanian union/Commonwealth, Khmelnytsky’s uprising, and Sienkiewicz’s treatment of the period.</li>
+          <li>The American Gilded Age and robber barons.</li>
+          <li>Philip II of Macedon and the League of Corinth.</li>
+          <li>The Punic Wars.</li>
+          <li>The Vikings.</li>
+          <li>The Crusades, especially the Second Crusade.</li>
+          <li>The Panic of 1873 and the financial crisis of 2008.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="alternatives">
+      <h2>Alternative themes and the designer’s rough ideas</h2>
+      <p>Retained for reference; these are not active rules. The designer moved through Prague and Dubrovnik as finalists, then chose to explore Kilmainham and selected Search Tonight. The museum approach was rejected.</p>
+      <details>
+        <summary>Rough game concepts and feedback</summary>
+        <ul>
+          <li><strong>Prague pneumatic post — designer:</strong> rotate pipes in a Labyrinth-like structure, possibly build centers, and accumulate deliveries. <strong>Assistant:</strong> shared routes, junctions, capacity, and deadlines could distinguish it from postal route-building games. Compare with both Labyrinth and Thurn und Taxis; nine-player resolution is untested.</li>
+          <li><strong>Neutral Moresnet — designer:</strong> zinc is scarce and countries compete to obtain and profit from it, potentially through bidding. <strong>Assistant:</strong> countries could be customers and players independent operators acquiring, transporting, and supplying zinc. The European shortage is a fictional premise until researched.</li>
+          <li><strong>Sweden’s 1967 traffic changeover — designer:</strong> difficult intersections, secret written simultaneous moves, a ten-round objective, and random traitors (one at four players, two at eight); no communication. <strong>Status:</strong> a separate proposed direction, not an adopted change to individual competition. <strong>Assistant alternative:</strong> rival delivery services with individual destinations and congestion, without traitors.</li>
+          <li><strong>Panic of 1873 — designer:</strong> no initial mechanics. <strong>Assistant:</strong> short contracts, supplies, and a player-influenced market; information and timing would matter. No economics model selected.</li>
+          <li><strong>Kilmainham — designer:</strong> prison escape inspired by the real map, with strong interest in Parnell, the Kilmainham agreement, and the Easter Rising. The designer wanted to explore its living prison history and rejected the museum/exhibition suggestion. Search Tonight became the lead.</li>
+          <li><strong>Dubrovnik quarantine — designer:</strong> limited boat spaces; admit a ship for a potentially profitable risk, or turn it away and remain safe. <strong>Assistant:</strong> inspection, delay, and information could create choices; shared consequences must be checked against the goal of avoiding blame and repeated victimization.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Competition-ranked themes supplied by the designer’s external research</summary>
+        <p><strong>Provenance:</strong> the following assessments came from another ChatGPT conversation pasted by the designer on 11 November. They are research leads, not independently verified findings here. “No direct match found” is not proof of absence, originality, or buyer demand.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">Reported rank</th><th scope="col">Theme</th><th scope="col">Reported competition</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Vikings / Viking trading port</td><td>High, including accessible trading games such as Knarr, Viking Traders, and Vikings on Board.</td></tr>
+            <tr><td>2</td><td>Punic Wars</td><td>High, including war games and broader regional/economic games.</td></tr>
+            <tr><td>3</td><td>Gilded Age / American robber barons</td><td>High setting overlap; Brass: Pittsburgh, Carnegie, Chicago 1875, and Boomtown were cited.</td></tr>
+            <tr><td>4</td><td>Financial crisis of 2008</td><td>Medium–high; QE, Crunch, and Credit Crunch were cited.</td></tr>
+            <tr><td>5</td><td>Hittites, Egypt, and peace/trade</td><td>Medium for conflict, low for the post-treaty commerce angle.</td></tr>
+            <tr><td>6</td><td>Commonwealth / Khmelnytsky uprising</td><td>Medium. The Magnates was cited as a political game with secret commitments.</td></tr>
+            <tr><td>7</td><td>Second Crusade</td><td>Medium, largely specialist treatments.</td></tr>
+            <tr><td>8</td><td>Great Irish Famine</td><td>Low–medium; The Great Hunger was cited.</td></tr>
+            <tr><td>9</td><td>Great Locomotive Chase</td><td>Low–medium; Engine Thieves was cited.</td></tr>
+            <tr><td>10</td><td>Easter Rising</td><td>Low; existing physical, digital, and print-and-play treatments were reported.</td></tr>
+            <tr><td>11</td><td>Philip II / League of Corinth</td><td>Low for the settlement; broader Greek and battle games exist.</td></tr>
+            <tr><td>12</td><td>Panic of 1873</td><td>Very low modern competition; the historical Bulls and Bears was cited.</td></tr>
+            <tr><td>13</td><td>Kilmainham restoration / museum opening</td><td>Very low for restoration; this game direction was later rejected by the designer.</td></tr>
+            <tr><td>14</td><td>Dubrovnik’s thirty-day quarantine</td><td>Very low for the specific event; Ragusa covers broader trade/building.</td></tr>
+            <tr><td>15=</td><td>Prague pneumatic post</td><td>No direct tabletop match found; broader postal games exist.</td></tr>
+            <tr><td>15=</td><td>Cospaia</td><td>No direct physical match found; a digital board game uses the name.</td></tr>
+            <tr><td>15=</td><td>Neutral Moresnet / zinc territory</td><td>No direct tabletop match found for the territory and its mining economy.</td></tr>
+            <tr><td>15=</td><td>Sweden’s right-hand traffic switch</td><td>No direct tabletop match found for the 1967 changeover.</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+    </section>
+
+    <section id="research">
+      <h2>Research register</h2>
+      <p><strong>Scope:</strong> international, with attention to Europe and Czech availability. Research should separate historical-theme crowding, mechanical overlap, and commercial saturation.</p>
+      <p><strong>Current evidence status:</strong> external ChatGPT reports were supplied by the designer. The linked pages, rules, sales figures, and availability claims have not been independently verified in this notebook. No verified family-market share or saturation estimate is established. Search Tonight’s direct competition analysis is still pending.</p>
+      <p>Research was previously blocked by network restrictions and then by an unavailable workspace. On 12 November the workspace became accessible and this notebook was updated. This does not itself verify any research claim or establish that external research sites are now accessible.</p>
+      <h3>Closest leads for the earlier bidding concept</h3>
+      <ul>
+        <li><strong>Couture:</strong> the supplied report describes simultaneous allocation across cities, scarce rewards, and possible empty-handed outcomes. Verify its actual rules, ties, bid recovery, and engagement after failure.</li>
+        <li><strong>Nidavellir:</strong> the report describes secret coin assignments across taverns and bid-ranked selection. It is Norse fantasy, not a historical Viking trading-port game.</li>
+        <li><strong>Furnace:</strong> the report describes visible bids, a winning company, and compensation for losing bids. Industrial theme overlap and compensation incentives are relevant.</li>
+      </ul>
+      <p>These are leads from the earlier auction discussion, not verified closest matches for Search Tonight. Prison life, inspections, stealth, information gathering, simultaneous selection, and individual objectives under a shared threat need a fresh comparison.</p>
+      <details>
+        <summary>Source links supplied with the reports — not live-checked here</summary>
+        <ul>
+          <li><a href="https://roxley.com/products/brass-pittsburgh">Brass: Pittsburgh — Roxley</a></li>
+          <li><a href="https://www.tlamagames.com/deskove-hry/knarr--cesky/">Knarr — Czech retail listing</a></li>
+          <li><a href="https://www.tabletopanalytics.com/project/brass-pittsburgh-53122">Brass: Pittsburgh — crowdfunding analytics</a></li>
+          <li><a href="https://www.allplay.com/board-games/couture">Couture — Allplay</a> and <a href="https://assets.allplay.com/board-games-couture-rulebook-link.pdf">supplied rulebook link</a></li>
+          <li><a href="https://www.grrre-games.com/nidavellir-en/">Nidavellir — publisher</a></li>
+          <li><a href="https://www.arcanewonders.com/product/furnace/">Furnace — publisher</a> and <a href="https://www.arcanewonders.com/eu/product/furnace-interbellum/">Interbellum expansion</a></li>
+          <li><a href="https://www.nobleknight.com/P/2147359490/Ramesses-War---Egypt-vs-The-Hittites">Ramesses’ War — retailer</a></li>
+          <li><a href="https://www.un.org/ungifts/replica-peace-treaty-between-hattusilis-and-ramses-ii">Egyptian–Hittite treaty replica — United Nations Gifts</a>. This link alone does not substantiate a commercial boom in Ugarit.</li>
+          <li><a href="https://phalanx.co.uk/games/hannibal-classic-edition/">Hannibal — PHALANX</a></li>
+          <li><a href="https://allplay.com/board-games/qe">QE — Allplay</a></li>
+          <li><a href="https://www.hfdgames.com/chariots.html">Clash of Chariots — supplied publisher link</a></li>
+          <li><a href="https://sklep.wargamer.pl/pl/podreczniki_ogniem-i-mieczem/16343-bfs-rul-05-eng.html">By Fire and Sword: Rebellion — supplied retailer link</a></li>
+          <li><a href="https://www.gmtgames.com/p-63-onward-christian-soldiers-ziplock.aspx">Onward, Christian Soldiers — GMT</a></li>
+          <li><a href="https://www.compassgames.com/product/the-great-hunger/">The Great Hunger</a> and <a href="https://www.compassgames.com/product/engine-thieves/">Engine Thieves — Compass Games</a></li>
+          <li><a href="https://boardgamegeek.com/boardgame/269975/storm-over-dublin">Storm Over Dublin — BoardGameGeek</a></li>
+          <li><a href="https://www.commandsandcolors.net/ancients/scenario-list/philip-of-macedon-359-338-bc/625-chaeronea-338-bc.html">Chaeronea — Commands &amp; Colors scenario</a></li>
+          <li><a href="https://emuseum.nyhistory.org/objects/42668/bulls-and-bears-the-great-wall-street-game">Bulls and Bears — New-York Historical Society collection</a></li>
+          <li><a href="https://www.seekersunite.com/ireland/kilmainham/">Kilmainham — Finders Seekers puzzle</a></li>
+          <li><a href="https://www.tlamagames.com/en/board-games/ragusa/">Ragusa — retailer</a></li>
+          <li><a href="https://mindok.cz/wp-content/uploads/2020/12/postovni-kuryr-pravidla-web.pdf">Poštovní kurýr / Thurn und Taxis — supplied rules link</a></li>
+          <li><a href="https://store.steampowered.com/app/4169800/Rulers_of_Cospaia/">Rulers of Cospaia — Steam</a></li>
+          <li><a href="https://www.ostbelgien.eu/en/fiche/virtualtour/kelmis">Kelmis / Moresnet — tourism reference</a></li>
+          <li><a href="https://www.sverigesradio.se/artikel/6767655">Dagen H — Sveriges Radio</a></li>
+        </ul>
+        <p>The first report quoted approximately $9.1 million and 37,000 Brass: Pittsburgh backers, more than 315,000 Knarr online plays, 8,385 backers for a Ra campaign, and Czech Knarr prices around 500–600 Kč. These are unverified reported figures with different meanings; do not combine them into a market-share estimate or sales forecast.</p>
+      </details>
+      <p><strong>Still unanswered:</strong> how much board-game spending comes from families playing with younger children. Age recommendations, adult toy purchases, crowdfunding, online plays, and family-category labels do not directly establish that share. The earlier research brief is retained in the archive.</p>
+    </section>
+
+    <section id="research-prompt">
+      <h2>Copy-ready competition research prompt</h2>
+      <p>Prepared for a normal ChatGPT conversation with Search or Deep Research. This is a request for research, not a completed report. Expand and copy the text below.</p>
+      <details>
+        <summary>Show the complete Search Tonight research prompt</summary>
+        <pre class="research-prompt">Conduct a thorough, source-based competition analysis for a physical board-game concept with the working title “A Search Tonight,” set in Kilmainham Gaol.
+
+I need an honest assessment of its closest competitors, potential originality, and commercial positioning. Search actively for games that challenge its originality. Do not assume an unusual historical setting makes the game mechanically original.
+
+RESEARCH SCOPE
+
+Research internationally, with particular attention to European and Czech availability. State the research date. Include older influential games, recent releases, announced games, crowdfunding projects, and relevant small-publisher or print-and-play games.
+
+The concept below is an early design direction, not a completed or tested game.
+
+THE CONCEPT
+
+Players are fictional prisoners or supporting characters operating within the historical setting of Kilmainham Gaol.
+
+The historical scenario is not yet selected. Two possibilities are:
+• Parnell’s imprisonment and the political developments surrounding the Kilmainham agreement of 1882.
+• Imprisonment following the Easter Rising of 1916.
+
+Verify the historical context. Keep these periods separate. The Kilmainham Treaty should not be presented as a formal treaty signed at a prison ceremony. Distinguish documented history from invented gameplay situations.
+
+The prison is a functioning setting during the historical events—not a museum. Its layout, restricted access, routines, and connections to the outside world should affect play.
+
+An inspection or search is approaching, but players have incomplete information about its target, timing, or conditions. They pursue individual objectives while deciding how much effort to spend learning more and how much to commit to making progress.
+
+Possible objectives include getting a message outside, obtaining access to a location, protecting a document, or establishing a useful contact. These are examples, not settled rules. Escape is not currently the central objective.
+
+Players compete for useful opportunities. A rival’s pursuit of their own objective can change what is available to others. Guards and inspections are controlled by the game system, rather than by a player acting as a traitor or prison governor.
+
+THE INTENDED PLAYER EXPERIENCE
+
+• Logical decisions and understandable consequences.
+• Deduction and calculated risk under incomplete information.
+• Anticipating other players’ choices.
+• Discovering effective combinations of actions, access, and information.
+• Adapting when opportunities change.
+• Meaningful competition without actions mainly intended to damage another player.
+• Some room for casual conversation rather than constant time pressure or intense memorization.
+
+An illustrative decision is:
+“Should I spend effort obtaining a clue, leaving less for my objective, or make a stronger attempt with incomplete information?”
+
+EXISTING DESIGN GOALS
+
+• Approximately 2–9 players, each playing for themselves.
+• About 40 minutes at 2–4 players.
+• At nine players, target no more than approximately 50 minutes.
+• Low downtime, with simultaneous decisions a preferred direction.
+• Approachable rules with strategic depth, using Splendor as a rough complexity reference.
+• Appeal to adults and teenagers, with possible accessibility to families with older children. A 10+ age rating is a hypothesis to test, not an established fact.
+• Several viable approaches rather than one dominant strategy.
+• Limited luck and recoverable setbacks.
+• No required trading, negotiation, hidden-traitor roles, or early player elimination.
+• A physical board game; a web prototype would only be a development tool.
+
+WHAT IS STILL UNDECIDED
+
+Do not treat these as completed mechanics:
+• Exact objectives, scoring, and victory conditions.
+• How clues work and how much players know.
+• Inspection timing and consequences.
+• Movement, map size, and location capacity.
+• Whether secret effort commitments or auctions belong in the final game.
+• Whether effort spent on an unsuccessful action is lost.
+• Resource recovery, ties, round count, and player-count scaling.
+
+RESEARCH QUESTIONS
+
+1. Are there existing games specifically about Kilmainham Gaol, Parnell’s imprisonment, the Kilmainham agreement, or imprisonment after the Easter Rising? Separate physical tabletop games from digital games, exhibitions, and educational activities.
+
+2. Which games are closest mechanically, regardless of theme? Investigate:
+• Prison-life and prison-escape games.
+• Stealth and inspection systems.
+• Information gathering versus acting under uncertainty.
+• Simultaneous action selection.
+• Competition for limited locations or opportunities.
+• Individual objectives under a shared external threat.
+
+3. Do any games already combine several of those elements in a similar way?
+
+4. Which comparisons are genuinely close, and which merely share a prison, historical, or deduction theme?
+
+5. Is there credible room for the intended audience and format, particularly fast play with up to nine players?
+
+6. Assess separately:
+A. Historical-theme crowding.
+B. Mechanical similarity and crowding.
+C. Commercial saturation.
+“Insufficient evidence” is an acceptable conclusion, especially for commercial saturation.
+
+SOURCE STANDARDS
+
+Prefer official rulebooks, publisher pages, and original crowdfunding pages for factual claims. Use BoardGameGeek and established retailers as supporting sources.
+
+For the closest competitors, inspect actual rules rather than relying only on descriptions.
+
+Clearly distinguish released, announced, funded, delayed, and unavailable games. Date prices and availability observations.
+
+Do not invent sales figures, market shares, or precise similarity scores. Backer counts, review counts, online plays, and sales measure different things. A low search count does not prove that no competitor exists or that demand is strong.
+
+OUTPUT
+
+1. A concise executive conclusion.
+
+2. A table of roughly 8–12 relevant competitors:
+• Title and year.
+• Publication status.
+• Player count and duration.
+• Competitive, cooperative, or opposing-team structure.
+• Main overlap with this concept.
+• Important differences.
+• Direct source links.
+
+3. A deeper comparison of the 3–5 closest games, covering information gathering, action timing, player interaction, inspections, setbacks, and downtime.
+
+4. Explain which parts of this concept appear familiar and which combinations may offer meaningful differentiation. Treat originality as a hypothesis, not a guarantee.
+
+5. Recommend three promising differentiation directions supported by the findings. Preserve our main goals rather than redesigning the game into a long cooperative escape game.
+
+6. List the uncertainties that require further research or playtesting, including whether nine-player resolution can remain fast and unsuccessful actions can remain enjoyable.</pre>
+      </details>
+    </section>
+
+    <section id="decisions">
+      <h2>Recent decisions and status</h2>
+      <ul>
+        <li><time datetime="2026-11-11">11 November 2026</time> — Historical interests and externally supplied competition research expanded the theme exploration. No reported saturation or absence claim was independently verified here.</li>
+        <li><time datetime="2026-11-11">11 November 2026</time> — Prague pneumatic post and Dubrovnik quarantine became preferred themes to explore. Rough ideas later included rotating pipes, zinc competition, a traffic-changeover traitor game, financial markets, Kilmainham escape, and risky ship admission.</li>
+        <li><time datetime="2026-11-11">11 November 2026</time> — The designer chose to explore Kilmainham’s prison history, rejected the museum direction, and requested Parnell/1882 and Easter Rising/1916 approaches.</li>
+        <li><time datetime="2026-11-11">11 November 2026</time> — The designer selected Search Tonight as the clear winner. Scenario, objectives, scoring, and exact mechanics remain unresolved.</li>
+        <li><time datetime="2026-11-11">11 November 2026</time> — A copy-ready live-research prompt was prepared. No Search Tonight competition report has yet been supplied or verified.</li>
+        <li><time datetime="2026-11-12">12 November 2026</time> — The designer reiterated that this HTML must stay current. Once workspace access returned, the delayed notes were incorporated, current direction separated from earlier drafts, and the research prompt included. No game or playtest was performed by this documentation update.</li>
+      </ul>
+      <p>Older decisions are preserved below as history. Earlier “current focus” or “next question” text in that archive describes the opportunity-boom phase, not the latest Kilmainham direction.</p>
+    </section>
+
+    <details id="archive">
+      <summary>Earlier notebook — opportunity-boom exploration, 10 November 2026</summary>
+      <p>Historical notes preserved in full. The active Kilmainham direction and current next step are above. Statements about the “current favorite,” mechanics, and next questions below belong to this earlier phase.</p>
+
     <section class="focus">
       <h2>Current focus</h2>
       <p>Discover the experience this game should offer through one focused design question at a time. The creative direction should come mainly from the designer’s own ideas.</p>
@@ -247,7 +586,8 @@
       <p><time datetime="2026-11-10">10 November 2026</time> — Clarified that Splendor’s discount buildup is not a favored feature: its opening feels repetitive, and the designer perceives that approach as too dominant in the base game. Added engaging early choices and avoidance of compulsory repetitive buildup to the brief. Other forms of progression remain open. Next focus: another enjoyable mechanic, starting with Azul.</p>
       <p><time datetime="2026-11-10">10 November 2026</time> — Clarified the creative process: the assistant should navigate discovery through focused questions, then help brainstorm concrete forms of play and test mechanics. The aim is the designer’s own game, with as much creative input from them as possible. Existing mechanics are optional, and reference games are not templates. Added chess, Rubik’s Cube solving, and Texas Hold’em to the references without inferring which features are enjoyed. Next focus: visible and hidden information.</p>
     </section>
+    </details>
   </main>
-  <footer>No game rules have been chosen yet. This page currently records project direction.</footer>
+  <footer>Working concept and research notebook. Rules, age recommendation, originality, and 2–9-player pacing remain unvalidated. Earlier ideas are preserved as drafts.</footer>
 </body>
 </html>
