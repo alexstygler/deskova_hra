@@ -26,9 +26,13 @@
     pre.research-prompt { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.65; padding: 16px; background: #f1f4ed; border-radius: 8px; }
     #archive { padding: 22px; border: 1px solid #d8dfd3; border-radius: 12px; }
     @media (max-width: 550px) { section, #archive { padding: 16px; } th, td { padding: 8px; } }
+    .site-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .site-tabs a { padding: 10px 18px; border: 1px solid #397558; border-radius: 8px; text-decoration: none; }
+    .site-tabs a[aria-current="page"] { background: #245e45; color: white; }
   </style>
 </head>
 <body>
+  <nav class="site-tabs" aria-label="Záložky webu"><a href="index.html" aria-current="page">Herní zápisník</a><a href="zdrojove-materialy.html">Zdrojové materiály</a></nav>
   <header>
     <p class="label">Working notebook · theme research</p>
     <h1>Board game notebook</h1>
@@ -40,6 +44,7 @@
     <section class="focus" id="current">
       <p class="label">Current research direction · updated 12 November 2026</p>
       <h2>Prague’s pneumatic post</h2>
+      <p><strong>Primary working source:</strong> the designer supplied <em>Prazska_potrubni_posta.docx</em> on 12 November and designated it as the principal historical reference for game development. The full text, tables, images, citations, and original download are in the separate <a href="zdrojove-materialy.html">Zdrojové materiály</a> tab. Historical claims must retain its period boundaries and uncertainty labels; game inventions remain proposals.</p>
       <p><strong>Latest steering:</strong> after reconsidering prison-game competition, the designer returned to Prague’s pneumatic post and has now supplied its competition report, dated 12 November. Prague remains the current candidate; no final theme or complete rules have been selected.</p>
       <p><strong>The designer’s original sketch:</strong> rotate pipe sections or junctions, possibly build new centers, and accumulate deliveries of postcards and other mail. A Labyrinth-like changing network is a possibility, not a requirement.</p>
       <p><strong>Main questions:</strong> how close is this to Labyrinth, Thurn und Taxis, pipe puzzles, and shared-network dispatch games? Can its decisions be distinctive and remain understandable at nine players?</p>
@@ -519,6 +524,7 @@ OUTPUT
     <section id="decisions">
       <h2>Recent decisions and status</h2>
       <ul>
+        <li><time datetime="2026-11-12">12 November 2026</time> — The designer designated the supplied Prague pneumatic-post DOCX as the primary working historical source and requested a dedicated website tab. The complete document and original file were preserved, with maps, images, tables, source links, and durable project reference notes. Its recommended December 1932 setting is not a selected game date.</li>
         <li><time datetime="2026-11-12">12 November 2026</time> — The designer supplied the Prague competition report and requested a short summary and proceed/stop judgment. Recorded the report and provenance. The assistant recommends a small fixed-network competitive-dispatch prototype; the designer has not yet selected those rules or committed to full development.</li>
         <li><time datetime="2026-11-12">12 November 2026</time> — The designer supplied a detailed Search Tonight competition report (external research dated 11 November), felt prison games were crowded enough, and requested renewed Prague pneumatic-post research. Recorded Prague as the active research candidate, retained Search Tonight as paused, summarized the supplied evidence with provenance, and added a copy-ready Prague prompt. No final theme decision or new rules were adopted.</li>
         <li><time datetime="2026-11-11">11 November 2026</time> — Historical interests and externally supplied competition research expanded the theme exploration. No reported saturation or absence claim was independently verified here.</li>

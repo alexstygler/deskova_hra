@@ -1,0 +1,142 @@
+{
+  "source": "sources/prague-post/Prazska_potrubni_posta.docx",
+  "sha256": "19101dca2a9c85582df9f780f0c0fef34d2027ebf36b60e011c38e4e7c65d42e",
+  "paragraphs_with_text": 389,
+  "embedded_image_occurrences": 33,
+  "unique_images": 31,
+  "external_link_occurrences": 365,
+  "images": [
+    {
+      "path": "sources/prague-post/images/image1.jpg",
+      "sha256": "d421a39047bf62ff5cbded030d414a821497cc9f5aa70c3acc40a65e0f897214"
+    },
+    {
+      "path": "sources/prague-post/images/image2.jpg",
+      "sha256": "e7713d89bbf5b29b15e9888498dcb6a8233432a61a69fcdaefcb72d5cad367aa"
+    },
+    {
+      "path": "sources/prague-post/images/image3.jpg",
+      "sha256": "21477091dd454b688662f1612c59b0151ca303230948e9c26052a0115158624f"
+    },
+    {
+      "path": "sources/prague-post/images/image4.jpg",
+      "sha256": "6652e1675d243f7e01c56ce580365631a4623cab51f624826e10b5399ee93f7a"
+    },
+    {
+      "path": "sources/prague-post/images/image5.jpg",
+      "sha256": "a671928a2674a6b94f5947dad8de49c5fe6ed614f24b78a9ab0258fa98240202"
+    },
+    {
+      "path": "sources/prague-post/images/image6.jpg",
+      "sha256": "7d4501ab31879054629ac650c3ed5caaa4f6d5ca6d4d9fba19ea5a6b168ed646"
+    },
+    {
+      "path": "sources/prague-post/images/image7.jpg",
+      "sha256": "4711294121eb1cd2566cc200a4e106525d7a715ca76147b81a05ce3701fc599b"
+    },
+    {
+      "path": "sources/prague-post/images/image8.jpg",
+      "sha256": "8180399eecc862b8dc4a4b46d37fe96b41ba1e9fdaa77ae7a428cde1e548448f"
+    },
+    {
+      "path": "sources/prague-post/images/image9.jpg",
+      "sha256": "b0bb59bd6784d89002721979303292755b51acfe1c912028d7debc30c0f655f5"
+    },
+    {
+      "path": "sources/prague-post/images/image10.jpg",
+      "sha256": "88a5b46b905fb6d231dab5764cbd7538a8efd90af9d78568a4208f970fffb3ea"
+    },
+    {
+      "path": "sources/prague-post/images/image11.jpg",
+      "sha256": "eada062fa728069a9d026e9c3f20cf11302feaeda488be00f5d17614118472e5"
+    },
+    {
+      "path": "sources/prague-post/images/image12.jpg",
+      "sha256": "2fae2a5bfebdd35330c83d1323adc2badb6afcef31ecab6e8c3be83c11ba4fa0"
+    },
+    {
+      "path": "sources/prague-post/images/image13.jpg",
+      "sha256": "f2a56761793cd7a4606b634600a371fa0b634257c70b0278d309fc2d242b6682"
+    },
+    {
+      "path": "sources/prague-post/images/image14.jpg",
+      "sha256": "054502e11b64838f2b4cc946f730c23f1dd5fff60a759eaa80dbb719f7911555"
+    },
+    {
+      "path": "sources/prague-post/images/image15.jpg",
+      "sha256": "3d5e48718ae1fc7ee28dbea959411e86788502675d17c31d5df4e4242290ad0f"
+    },
+    {
+      "path": "sources/prague-post/images/image16.jpg",
+      "sha256": "6d736c82655cedd3b43b5a3421d7ff8717c635929e2254a85e6dae6f43021210"
+    },
+    {
+      "path": "sources/prague-post/images/image17.jpg",
+      "sha256": "6626317d1775d2b9a04b1c2710d6fcd25da724e9ff7c87a5ead1ec7e0286338b"
+    },
+    {
+      "path": "sources/prague-post/images/image18.jpg",
+      "sha256": "442de8a1903c2f856e0d433214e2a0f2f835158134b1573072909581720a5190"
+    },
+    {
+      "path": "sources/prague-post/images/image19.jpg",
+      "sha256": "1910daf53dfe5ba8818692bf983bfe02aa987a0986f6aed0933704077ea3ecee"
+    },
+    {
+      "path": "sources/prague-post/images/image20.jpg",
+      "sha256": "26c051c54513c27d10e2d64195fd1ea431d6ac053cf5301d132e13b6de855c67"
+    },
+    {
+      "path": "sources/prague-post/images/image21.jpg",
+      "sha256": "176d31b5c65eaa3d78b3ca0997d3ed57fc53a9c9f0ea60c7a8e5e5235e1abc45"
+    },
+    {
+      "path": "sources/prague-post/images/image22.jpg",
+      "sha256": "f6dc3791e8a8cbeb14e9eadfad8c1f07dd86896290d6cdc5650e2240e8069ea3"
+    },
+    {
+      "path": "sources/prague-post/images/image23.jpg",
+      "sha256": "cb8a3e00aff32110983df11aed77a8217f3720471aa244c44a03fccda2cb0ce7"
+    },
+    {
+      "path": "sources/prague-post/images/image24.jpg",
+      "sha256": "f37335eca0ce5a7c5622783acc9e2b482afb4003cc5b6ec101550f955cd707db"
+    },
+    {
+      "path": "sources/prague-post/images/image25.jpg",
+      "sha256": "bce648baf1da0fa86604b45d6ca84bab6e1705df86633d8bc9fe5df1b4f8e315"
+    },
+    {
+      "path": "sources/prague-post/images/image26.jpg",
+      "sha256": "5a56a6710a7098cc9fc8bb2efe31a58da1ae764c9f0ddc5725f3aabc14a9942c"
+    },
+    {
+      "path": "sources/prague-post/images/image27.jpg",
+      "sha256": "9f3bc8b0ee9beff0423de9115e6bde756b9e16de6d142a4952ba3e9ed8ef9fcf"
+    },
+    {
+      "path": "sources/prague-post/images/image28.jpg",
+      "sha256": "922430b617668c794be1dd50ffca74bdc598da04d9430fb82a9b74637ed1ecc3"
+    },
+    {
+      "path": "sources/prague-post/images/image29.jpg",
+      "sha256": "f43ece35852a054b2c84a2b78ee6a405044fb5375c36eb7e9d07a66d51191272"
+    },
+    {
+      "path": "sources/prague-post/images/image30.jpg",
+      "sha256": "37212eb0fcabff13771d24edd13fa7743f310324a64ccdf5a559d7b2e74c9d5b"
+    },
+    {
+      "path": "sources/prague-post/images/image7.jpg",
+      "sha256": "4711294121eb1cd2566cc200a4e106525d7a715ca76147b81a05ce3701fc599b"
+    },
+    {
+      "path": "sources/prague-post/images/image8.jpg",
+      "sha256": "8180399eecc862b8dc4a4b46d37fe96b41ba1e9fdaa77ae7a428cde1e548448f"
+    },
+    {
+      "path": "sources/prague-post/images/image31.jpg",
+      "sha256": "889774fca146179c2009855370d3044f66da43c67ddbcf93110e077604b59c5b"
+    }
+  ]
+}
