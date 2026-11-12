@@ -16,6 +16,14 @@ the same date. The current source focuses on 1932–1939 and suggests 1937 as a
 well-documented setting; the earlier December-1932-only recommendation is
 superseded. The game year remains undecided.
 
+The user also supplied `sources/prague-post/Mapa_prazske_potrubni_posty_1932-1939.pdf`
+as a supplementary reference. Study all three pages and the notes in the source
+README before deriving a map or graph. It is a 2026 reconstruction combining
+evidence of different dates, not an inventory at one instant. Preserve the
+distinction between explicitly documented pipe counts, drawing-based readings,
+and uncertain/planned lines. Crossings are not automatically junctions. Page 3
+uses a separate numbering of private participants, not the postal node IDs.
+
 Preserve the source's uncertainty labels, dates, and distinctions between items
 and capsules, public and private charges, plans and operating stations, and
 different historical periods. Do not present game inventions as historical facts.
@@ -38,3 +46,8 @@ the user explicitly requests a broader brainstorm. There is no playable game yet
 and its media manifest from the committed original DOCX. Do not hand-edit the
 generated transcription. Source-page editorial changes belong in that script.
 After changes, verify text/image/link preservation and the site's navigation.
+The source builder also includes the supplementary PDF and its previews/text
+when `sources/prague-post/mapa/manifest.json` is present. Rebuilding the DOCX
+transcription must preserve that map section.
+When replacing the map PDF, run `python scripts/build_map_source.py` first
+(requires PyMuPDF), then rebuild the source HTML.

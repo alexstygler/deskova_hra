@@ -1,0 +1,56 @@
+PRAŽSKÁ POTRUBNÍ POŠTA   /   1932–1939
+Soupis po jednotlivých větvích
+Tmavé barvy vycházejí z technického popisu [S]. Světlejší barvy jsou odečet z kresby [M]. Šedé spoje vyžadují další doklad.
+Pramenná rekonstrukce   •   12. listopadu 2026
+2 / 3
+1   Vinohrady, Žižkov, Vršovice a Nusle
+2 podle kresby: 1–35, 35–31 a 35–32.
+1 podle kresby: 31–33, 33–36, 33–73 a 32–65.
+Otevřené: 35–34 je na [E]. 36–37–39 a 32–67–69 jsou na [E] tečkované, na [M] plné. 73–74 zachycuje [M].
+2   Nové Město a směr Vyšehrad
+2 podle kresby: 1–4.
+1 podle kresby: 4–13, 4–17 a 4–27.
+3   Smíchov a Západní nádraží
+2 podle kresby: 1–3, 3–9 a 9–55.
+1 podle kresby: 55–30 a 55–56.
+Otevřené: 30–Š k Poštovní spořitelně. Dále směr přes 57 k 59 podle [M], k 60 podle [E]. Tisk [P34] plánuje spojení
+30–59. Stav a vztah konců 59 a 60 zůstávají otevřené.
+4   Staré Město, Malá Strana, Hradčany a Dejvice
+Doloženy 2 roury od ústředny k Praze 2.
+Doložena 1 roura na 2–26 a 2–29.
+2 podle kresby: 2–8 a 8–28 až přibližně k rozbočení pod Hradem.
+1 podle kresby: od rozbočení k 10 a 11, dále 10–47 a 47–45.
+Otevřené: 11–51. [E] kreslí prodloužení, [M] souvislou čáru.
+5   Revoluční, Denisovo nádraží, Holešovice, Karlín a Libeň
+2 podle kresby: 1–5 a 5–6.
+1 podle kresby: 6–40, 40–41 a 41–22.
+Otevřené: počet rour na 6–14. Tisk [P30] dokládá dokončení této trasy a trasy 6–40. Tisk [P36] dokládá stanici 86
+v roce 1936. Napojení 86 je zakresleno podle [E], s orientační polohou.
+Neověřený stav: větve k 46, 21 a 20 v Holešovicích a od 22 k 23 a 79. Jejich kresba a popis stavu se v pramenech
+liší.
+Samostatné přípojky od Jindřišské
+1 roura doložena: Praha 7 Masarykovo nádraží, Praha 15 Wilsonovo nádraží a poštovní úřad ředitelství na Fochově
+třídě.
+Přerušované šipky bez stanice na okrajích původních plánů značí možnost dalšího prodloužení. V přehledu jsou
+zakreslené pojmenované nebo očíslované větve.
+Parlamentní stav 66 stanic na konci roku 1936 je souhrn. U každého bodu neudává ani vedení, ani počet rour. Mapa je
+složená z více pramenů, takže nepředstavuje inventuru ke konkrétnímu dni.
+Orientační body: 2 Kaprova, 3 Voršilská, 8 Malá Strana, 9 Šeříková, 10 Hrad, 26 Dušní či Kolkovna, 28 Senát, 29
+Poslanecká sněmovna, 30 Ministerstvo pošt, 31 Vinohrady, 35 Vinohrady, 36 Žižkov, 47 Dejvice a 55 Smíchov. [S, P30, E]
+Detail původní kresby [M]
+Pár čar je dobře vidět např. na 3–9 přes Vltavu a na 1–4. Na 4–13 či 4–27 pokračuje
+jediná čára. U centrály se různá vedení sbíhají a přechod se nedá vždy přesně
+umístit.
+Jak fungoval protisměr na Praze 26
+Když se pouzdra z Prahy 26 vydala do Prahy 2, zablokovala vysílač na Praze 2. Po
+průjezdu posledního pouzdra čekající zásilka do Prahy 26 odjela automaticky. Praha
+2 měla stejný typ blokování i směrem ke sněmovně, Praha 29. [S]
+Prameny k mapě
+[S] M. Schmidt, Potrubní pošta v Praze, Strojnický obzor, 1934
+[M] Poštovní muzeum, plán PIR 71, př. č. 265/1933; reprodukce v Jedna, 9/2020, s. 28
+[E] Antonín Šmíd, EXPONET, list 56, síť Velké Prahy
+[P30] Parlamentní tisk 640, stavební zpráva za rok 1930
+[P31] Parlamentní tisk 2100, zpráva o dokončení v roce 1931
+[P34] Parlamentní tisk 125, stav roku 1934 a plán Praha 30–59
+[P36] Parlamentní tisk 1100, stav roku 1936 a stanice Praha 86
+[R] Josef Maršík, Český rozhlas, Fochova, dnes Vinohradská 12

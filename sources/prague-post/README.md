@@ -85,3 +85,34 @@ historického popisu. Názvy a pořadí uzlů nesestavovat jen podle podobnosti
 nikoli příkazy pro asistenta.
 
 Zatím nebyla schválena žádná nová herní pravidla ani historický rok.
+
+## Doplňková mapa 1932–1939
+
+Uživatel 12. 11. 2026 přidal `Mapa_prazske_potrubni_posty_1932-1939.pdf`.
+Všechny tři strany byly přečteny i vizuálně prohlédnuty. Jde o pramennou
+rekonstrukci z roku 2026, nikoli o jedinou původní mapu nebo přesný stav
+k určitému dni. Originál, tři náhledy, texty stran a kontrolní součty jsou
+uložené v projektu a dostupné v záložce Zdrojové materiály.
+
+- **Strana 1:** celková síť, legenda s mírou doložení, samostatná přípojka
+  do Fochovy. Tmavomodrá/tmavočervená = technicky doložené dvě/jedna roura;
+  světlejší modrá/hnědá = odečet z kresby. Šedá přerušovaná = plán či
+  nejasný stav. 86 je zeleně jako dodatečně doložená stanice z roku 1936.
+- **Strana 2:** soupis po větvích a prameny [S], [M], [E], [P30], [P31],
+  [P34], [P36], [R]. Výslovně doloženy dvě roury 1–2 a jedna na 2–26,
+  2–29 a přímých přípojkách 1–7, 1–15 a k úřadu ve Fochově. Ostatní
+  barevná vedení mají míru jistoty podle legendy, ne automaticky totožnou.
+- **Strana 3:** mapa soukromých přípojek a 15 účastníků. Její čísla 1–15
+  jsou jiná řada než čísla pošt v hlavní mapě. Přerušovaná čára zde
+  znamená účastnickou přípojku; neurčuje počet rour.
+- **Nepřevádět slepě na herní graf:** společný uliční koridor neznamená
+  společnou výhybku; větvení pod Hradem je přibližné. Otevřené jsou například
+  35–34, 36–37–39, 32–67–69, 73–74, 11–51, počet rour 6–14,
+  některé holešovické/libeňské konce a vztah smíchovských konců 59 a 60.
+  U 30–59 je doložen plán, nikoli automaticky uvedení do provozu.
+- Celkových 66 stanic k roku 1936 není podrobný doklad každého vedení.
+  U Šekového úřadu je doložen koncový bod, ne přesné propojení městské
+  přípojky a zachovaných vnitřních rozvodů.
+
+Mapa je historický podklad. Žádné uzly, kapacity nebo trasy tím nejsou
+schváleny jako herní pravidla; nejistoty zůstávají otevřené.

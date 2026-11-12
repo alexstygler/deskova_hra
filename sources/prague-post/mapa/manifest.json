@@ -1,0 +1,105 @@
+{
+  "source": "sources/prague-post/Mapa_prazske_potrubni_posty_1932-1939.pdf",
+  "sha256": "e7b7ca59d1584fbfc523bc4a7af2030f5d0279880d4ecdcbd36a968475509ccc",
+  "page_count": 3,
+  "pages": [
+    {
+      "number": 1,
+      "title": "Přehled sítě a legenda",
+      "image": "sources/prague-post/mapa/strana-1.png",
+      "text": "sources/prague-post/mapa/strana-1.txt",
+      "image_sha256": "24fdc86b0a72d0875d5aab824ea09f883276462b206a4def37d4d2bb82815dfe"
+    },
+    {
+      "number": 2,
+      "title": "Soupis větví a prameny",
+      "image": "sources/prague-post/mapa/strana-2.png",
+      "text": "sources/prague-post/mapa/strana-2.txt",
+      "image_sha256": "5e2e370fbdedf53a5f9198b4e98fb881dfb70be7c21981a29ab2945e6a355197"
+    },
+    {
+      "number": 3,
+      "title": "Soukromé přípojky v centru",
+      "image": "sources/prague-post/mapa/strana-3.png",
+      "text": "sources/prague-post/mapa/strana-3.txt",
+      "image_sha256": "f337a9ef7d4b0072c346123ba12fdc6178245fb0ad03125b7c8becb953f30145"
+    }
+  ],
+  "links": [
+    {
+      "page": 1,
+      "url": "https://www.praha1.cz/app/uploads/2020/08/Jedna_zari_.pdf#page=15",
+      "label": "Dobová mapa Poštovního muzea [M]"
+    },
+    {
+      "page": 1,
+      "url": "https://www.exponet.info/thumbs/360/full_0056.jpg",
+      "label": "Šmídův plán a prodloužení [E]"
+    },
+    {
+      "page": 2,
+      "url": "https://www.casopisczechindustry.cz/products/potrubni-posta-v-praze/",
+      "label": "[S] M. Schmidt, Potrubní pošta v Praze, Strojnický obzor, 1934"
+    },
+    {
+      "page": 2,
+      "url": "https://www.praha1.cz/app/uploads/2020/08/Jedna_zari_.pdf#page=15",
+      "label": "[M] Poštovní muzeum, plán PIR 71, př. č. 265/1933; reprodukce v Jedna, 9/2020, s. 28"
+    },
+    {
+      "page": 2,
+      "url": "https://www.exponet.info/thumbs/360/full_0056.jpg",
+      "label": "[E] Antonín Šmíd, EXPONET, list 56, síť Velké Prahy"
+    },
+    {
+      "page": 2,
+      "url": "https://www.psp.cz/eknih/1929ns/ps/tisky/t0640_52.htm",
+      "label": "[P30] Parlamentní tisk 640, stavební zpráva za rok 1930"
+    },
+    {
+      "page": 2,
+      "url": "https://www.psp.cz/eknih/1929ns/ps/tisky/t2100_18.htm",
+      "label": "[P31] Parlamentní tisk 2100, zpráva o dokončení v roce 1931"
+    },
+    {
+      "page": 2,
+      "url": "https://public.psp.cz/eknih/1935ns/ps/tisky/t0125_51.htm",
+      "label": "[P34] Parlamentní tisk 125, stav roku 1934 a plán Praha 30–59"
+    },
+    {
+      "page": 2,
+      "url": "https://www.psp.cz/eknih/1935ns/ps/tisky/t1100_32.htm",
+      "label": "[P36] Parlamentní tisk 1100, stav roku 1936 a stanice Praha 86"
+    },
+    {
+      "page": 2,
+      "url": "https://informace.rozhlas.cz/sites/default/files/documents/5c45bae251a806d4d4587026f5f832fc.pdf",
+      "label": "[R] Josef Maršík, Český rozhlas, Fochova, dnes Vinohradská 12"
+    },
+    {
+      "page": 3,
+      "url": "https://www.exponet.info/thumbs/360/full_0112.jpg",
+      "label": "[E112] Antonín Šmíd, EXPONET, list 112, mapa soukromých stanic"
+    },
+    {
+      "page": 3,
+      "url": "https://www.exponet.info/thumbs/360/full_0113.jpg",
+      "label": "[E113] Antonín Šmíd, EXPONET, list 113, seznam účastníků"
+    },
+    {
+      "page": 3,
+      "url": "https://www.exponet.info/thumbs/360/full_0126.jpg",
+      "label": "[E126] Antonín Šmíd, EXPONET, list 126, nejistota počtu účastníků"
+    },
+    {
+      "page": 3,
+      "url": "https://www.casopisczechindustry.cz/products/potrubni-posta-v-praze/",
+      "label": "[S] M. Schmidt, Potrubní pošta v Praze, Strojnický obzor, 1934"
+    },
+    {
+      "page": 3,
+      "url": "https://www.praha1.cz/app/uploads/2020/08/Jedna_zari_.pdf#page=15",
+      "label": "[M] Poštovní muzeum, plán PIR 71, př. č. 265/1933; reprodukce v Jedna, 9/2020, s. 28"
+    }
+  ]
+}

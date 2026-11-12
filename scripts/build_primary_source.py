@@ -145,6 +145,46 @@ with ZipFile(DOCX) as z:
         candidate.unlink(missing_ok=True)
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 
+map_html = ''
+map_manifest_path = ASSETS / 'mapa' / 'manifest.json'
+if map_manifest_path.exists():
+    map_manifest = json.loads(map_manifest_path.read_text())
+    pdf_url = escape(map_manifest['source'], quote=True)
+    figures = []
+    for entry in map_manifest['pages']:
+        number = int(entry['number'])
+        title = escape(entry['title'])
+        preview = escape(entry['image'], quote=True)
+        transcript = escape((ROOT / entry['text']).read_text())
+        figures.append(f'''<figure id="mapa-strana-{number}">
+          <figcaption><h3>Strana {number}: {title}</h3></figcaption>
+          <a href="{preview}" target="_blank" rel="noopener"><img src="{preview}" alt="Strana {number}: {title}. Úplné PDF a textový přepis jsou dostupné v této sekci." loading="lazy" decoding="async"></a>
+          <p><a href="{pdf_url}#page={number}" target="_blank" rel="noopener">Otevřít stranu {number} v PDF</a> · <a href="{preview}" target="_blank" rel="noopener">Zvětšit náhled</a></p>
+          <details><summary>Textový přepis strany {number}</summary><pre class="map-transcript">{transcript}</pre></details>
+        </figure>''')
+    map_links = []
+    seen = set()
+    for link in map_manifest.get('links', []):
+        if link['url'] not in seen and urlsplit(link['url']).scheme.lower() in {'https', 'http'}:
+            seen.add(link['url'])
+            map_links.append(f'<li><a href="{escape(link["url"], quote=True)}">{escape(link["label"])}</a> (strana {int(link["page"])})</li>')
+    map_html = f'''<section id="mapa-podklad" aria-labelledby="mapa-nadpis">
+      <p class="label">Doplňkový mapový podklad · dodáno 12. listopadu 2026</p>
+      <h2 id="mapa-nadpis">Mapa pražské potrubní pošty 1932–1939</h2>
+      <p>Uživatelem dodaná třístránková pramenná rekonstrukce z 12. listopadu 2026. Doplňuje hlavní dokument; nenahrazuje jej a není schválenou herní deskou. Jednotlivé mapové prvky vycházejí z různých dobových podkladů a pozdějších dokladů.</p>
+      <p><a href="{pdf_url}" download>Stáhnout původní mapu v PDF</a> · <a href="{pdf_url}" target="_blank" rel="noopener">Otevřít celé PDF</a></p>
+      <ul>
+        <li><strong>Míra doložení:</strong> tmavé barvy odlišují počet rour výslovně doložený Schmidtem, světlejší barvy odečet z kresby. Šedé přerušované vedení může být plán, rozpor nebo neověřený stav. Zelená 86 je doložena v roce 1936.</li>
+        <li><strong>Topologie:</strong> společný uliční koridor ani křížení čar samo neprokazuje společnou výhybku. Průběh tras je schematický; mapa není inventurou k jednomu dni.</li>
+        <li><strong>Jedna versus dvě roury:</strong> jedna střídá směry a blokuje protější vysílač; dvě umožňují souběh směrů. Výslovné technické doklady se nesmějí zaměňovat za odhad celé větve.</li>
+        <li><strong>Dvě číselné řady:</strong> hlavní mapa používá čísla dobových pošt. Na straně 3 čísla 1–15 označují soukromé účastníky ze Šmídova seznamu. Zde přerušovaná čára znamená soukromou přípojku, nikoli automaticky neověřený spoj nebo počet rour.</li>
+        <li><strong>Otevřené otázky:</strong> například konce 59/60 na Smíchově, část holešovických větví, 11–51, přesné zapojení některých účastníků a vztah přípojky Šekového úřadu k vnitřním rozvodům.</li>
+      </ul>
+      <p>Náhledy lze otevřít ve větší velikosti. Originální PDF zachovává vlastní kresbu, legendy a odkazy.</p>
+      {''.join(figures)}
+      <details><summary>Zdrojové odkazy obsažené v mapovém PDF</summary><ul>{''.join(map_links)}</ul></details>
+    </section>'''
+
 page = '''<!doctype html>
 <html lang="cs">
 <head>
@@ -166,6 +206,9 @@ page = '''<!doctype html>
     .citations,.caption { font-size: .9rem; color: #526756; }
     .caption { margin-top: 6px; } .source-image { margin-top: 24px; }
     .source-image img { display: block; width: auto; max-width: 100%; height: auto; margin: auto; }
+    #mapa-podklad figure { margin: 24px 0; }
+    #mapa-podklad img { display: block; max-width: 100%; height: auto; border: 1px solid #d8dfd3; }
+    .map-transcript { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; padding: 12px; background: #f1f4ed; }
     .note,.sheet-note { padding-left: 12px; border-left: 2px solid #d8dfd3; }
     .table-wrap { overflow-x: auto; } table { border-collapse: collapse; width: 100%; }
     th,td { text-align: left; vertical-align: top; padding: 12px; border: 1px solid #d8dfd3; }
@@ -184,7 +227,7 @@ page = '''<!doctype html>
     <p class="label">Primární pracovní podklad · přidáno 12. listopadu 2026</p>
     <h1>Pražská potrubní pošta</h1>
     <p>Úplný obsah dokumentu dodaného autorem hry: historické výpisky, mapy, obrazové doklady a odkazy na prameny.</p>
-    <p><a href="sources/prague-post/Prazska_potrubni_posta.docx" download>Stáhnout původní DOCX</a> · <a href="#dokument">Číst celý dokument</a></p>
+    <p><a href="sources/prague-post/Prazska_potrubni_posta.docx" download>Stáhnout původní DOCX</a> · <a href="#mapa-podklad">Mapa sítě v PDF</a> · <a href="#dokument">Číst celý dokument</a></p>
   </header>
   <main>
     <section aria-labelledby="pravidla-prace">
@@ -196,6 +239,7 @@ page = '''<!doctype html>
       <p>Historická tvrzení budeme opírat o konkrétní listy a pasáže. Herní zjednodušení a nové mechanismy budeme označovat samostatně. Obrázky lze otevřít v původní velikosti.</p>
       <details><summary>Obsah dokumentu</summary><ul>''' + toc_html + '''</ul></details>
     </section>
+''' + map_html + '''
     <article id="dokument" aria-label="Úplný přepis dodaného dokumentu">
 ''' + rendered + '''
     </article>

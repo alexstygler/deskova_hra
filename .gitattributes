@@ -1,0 +1,3 @@
+# Preserve original reference documents as binary assets.
+*.pdf binary
+*.docx binary
