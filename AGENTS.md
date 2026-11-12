@@ -11,6 +11,10 @@ On 12 November 2026 the user designated
 for the Prague pneumatic-post game. Read `sources/prague-post/README.md` first,
 then consult the relevant full passages, illustrations, and citations in
 `zdrojove-materialy.html` or the original DOCX before making specific claims.
+The user replaced the initially supplied document with a corrected version on
+the same date. The current source focuses on 1932–1939 and suggests 1937 as a
+well-documented setting; the earlier December-1932-only recommendation is
+superseded. The game year remains undecided.
 
 Preserve the source's uncertainty labels, dates, and distinctions between items
 and capsules, public and private charges, plans and operating stations, and

@@ -21,6 +21,10 @@ NS = {
     'a': 'http://schemas.openxmlformats.org/drawingml/2006/main',
 }
 W, R = NS['w'], NS['r']
+manifest_path = ASSETS / 'manifest.json'
+previous_images = set()
+if manifest_path.exists():
+    previous_images = {item['path'] for item in json.loads(manifest_path.read_text()).get('images', [])}
 
 def plain(node):
     return ''.join(t.text or '' for t in node.findall('.//w:t', NS))
@@ -134,7 +138,12 @@ with ZipFile(DOCX) as z:
         'external_link_occurrences': len(links),
         'images': images,
     }
-    (ASSETS / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
+    for obsolete in previous_images - {item['path'] for item in images}:
+        candidate = ROOT / obsolete
+        if candidate.resolve().parent != (ASSETS / 'images').resolve():
+            raise ValueError(f'Unexpected managed image path: {obsolete}')
+        candidate.unlink(missing_ok=True)
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 
 page = '''<!doctype html>
 <html lang="cs">
@@ -182,7 +191,8 @@ page = '''<!doctype html>
       <h2 id="pravidla-prace">Jak s podkladem pracujeme</h2>
       <p>Autor hry tento dokument určil jako hlavní pracovní zdroj pro další návrh. Jde o výpisky a soupis dokladů, který odkazuje na původní prameny. Označení zdroje neznamená, že jsme nezávisle ověřili všechny citované prameny.</p>
       <p>Zachováváme jeho značky <strong>[OPRAVA], [ROZPOR], [NEOVĚŘENO], [JINÉ OBDOBÍ] a [ODHAD AUTORA]</strong>. Údaje pro různé roky, veřejný a soukromý provoz, pouzdra a jednotlivé zásilky se nesmějí bez dalšího spojovat.</p>
-      <p><strong>Pracovní orientace, nikoli schválená pravidla:</strong> pro rozvinutou síť a veřejný příplatek 40 h dokument doporučuje 15.–31. prosinec 1932. Herní rok jsme zatím nevybrali. Jednorourové úseky střídaly směr, vytížené úseky měly dvě roury. Čekání při protisměru je doložené; potrubí bylo pevné a obsluha ovládala výhybky. Rychlá jízda pouzdra sama nezaručovala rychlé doručení adresátovi.</p>
+      <p><strong>Správná verze podkladu:</strong> autor 12. listopadu 2026 nahradil původně zaslaný soubor tímto dokumentem. Závěrečná kapitola nyní pokrývá provoz od 15. prosince 1932 do 31. května 1939 a jako dobře doložené jednotné zasazení navrhuje rok 1937. Starší doporučení omezit zasazení na konec prosince 1932 už nepoužíváme jako aktuální orientaci. Herní rok jsme zatím nevybrali.</p>
+      <p><strong>Pracovní orientace, nikoli schválená pravidla:</strong> jednorourové úseky střídaly směr, vytížené úseky měly dvě roury. Čekání při protisměru je doložené; potrubí bylo pevné a obsluha ovládala výhybky. Rychlá jízda pouzdra sama nezaručovala rychlé doručení adresátovi. Od 1. března 1937 se mění příplatek za místního posla, nikoli samotný 40haléřový potrubní příplatek.</p>
       <p>Historická tvrzení budeme opírat o konkrétní listy a pasáže. Herní zjednodušení a nové mechanismy budeme označovat samostatně. Obrázky lze otevřít v původní velikosti.</p>
       <details><summary>Obsah dokumentu</summary><ul>''' + toc_html + '''</ul></details>
     </section>
@@ -190,7 +200,7 @@ page = '''<!doctype html>
 ''' + rendered + '''
     </article>
   </main>
-  <footer><p>Zdroj: Prazska_potrubni_posta.docx, dodáno autorem hry 12. listopadu 2026. Text, pořadí, tabulky, 33 vložení obrázků a zdrojové odkazy jsou převedeny z dokumentu; původní soubor zůstává dostupný ke stažení. Tato záložka obsahuje zdrojový materiál, nikoli hotová herní pravidla.</p><p><a href="#">Zpět nahoru</a> · <a href="index.html">Zpět do herního zápisníku</a></p></footer>
+  <footer><p>Zdroj: Prazska_potrubni_posta.docx, opravená verze dodaná autorem hry 12. listopadu 2026. Text, pořadí, tabulky, ''' + str(len(images)) + ''' vložení obrázků a zdrojové odkazy jsou převedeny z aktuálního dokumentu; jeho originál zůstává dostupný ke stažení. Tato záložka obsahuje zdrojový materiál, nikoli hotová herní pravidla.</p><p><a href="#">Zpět nahoru</a> · <a href="index.html">Zpět do herního zápisníku</a></p></footer>
 </body>
 </html>
 '''
