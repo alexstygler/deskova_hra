@@ -38,3 +38,8 @@ Once access is enabled, start with ČNB archival finding aids and institutional 
 ## Next required action
 
 Review and save the proposed domains in environment settings and publish the environment as requested by the draft tool. Recheck runtime policy and make fresh source requests before claiming access works. The live bank-roster check remains pending until then.
+
+
+## Supplied-research update — 16 November 2026
+
+The designer has now supplied `Prazska_potrubni_posta_1936-1937_vyzkum_pro_hru.md`. Its bank-identity research and qualifications supersede treating the earlier nine bank-labelled entries as a ready roster. It does not establish nine distinct commercial banks with active private connections in 1936/37. Its external citations have not been independently reverified here. See the notebook’s `research-1936-1937` section for the attributed assessment; keep previous checks as dated history.
