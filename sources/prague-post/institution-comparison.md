@@ -59,3 +59,9 @@ Test at 2, 4, and 9 with comparable opportunities. Rotate participants among ins
 ## Next focus
 
 Agree whether private access is an abstract equal step or a geographically meaningful part of play. That choice must precede an honest numerical starting-position ranking. The current recommendation is equal private access for the first small prototype, followed by geography-sensitive tests only if the distinction is enjoyable.
+
+## Follow-up: did outgoing private mail go through the central office?
+
+The primary source describes outgoing correspondence placed in a returning private capsule, with the institution arranging for the central office to inspect the returned capsule. List 125 gives an outgoing Anglo-československá banka letter to Argentina with a central-office number; list 126 describes a Národní banka item through the central office and Praha 7; list 128 describes an outgoing Česká banka Union envelope with a label added by the central station. These support central processing as the working model for this documented use of the private tube service. They do not establish a universal legal or operational requirement covering every letter from every institution, every period, or ordinary mail sent without using its tube connection. No verified direct institution-to-institution bypass is established by the consulted passages.
+
+Thus using Jindřišská as the game handoff is historically supported, rather than an arbitrary invented hub. Equal handoff timing for every player remains a gameplay abstraction; a common hub does not prove equal private travel lengths, waiting times, or capacity. Physical independent direct pipes and universal routing should not be inferred from examples alone.
