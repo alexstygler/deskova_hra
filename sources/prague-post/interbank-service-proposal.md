@@ -59,3 +59,13 @@ The designer chooses processing time and pipe access only, without extra recipie
 credits. Bank-pipe directions follow an automatic schedule. Exact phase count,
 priority, processing time and mandatory versus deferrable reply handling remain
 open. Player-chosen action order still applies within the eventual timetable.
+
+
+## Daily phases and reply preparation chosen
+
+One incoming phase followed by one outgoing phase per day is chosen. Interbank
+replies must be prepared on the next working day after actual receipt; this does
+not guarantee delivery to their original sender that day. The processing-time
+constraint, central transfers and overload handling remain open. With unlimited
+letters per capsule, pipe access alone may not create meaningful competition;
+preparation slots and final processing are next questions, not adopted rules.

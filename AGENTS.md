@@ -13,8 +13,10 @@ chosen game model gives each player bank one bidirectional pipe to Jindřišská
 Useful interbank business is allowed to incidentally disadvantage a rival; the
 replying bank earns a processing fee. Requests become next-morning work after receipt. The user delegated fee funding;
 use requester-paid recipient fees as the starting rule. The recipient uses processing time and pipe access, not extra daily credits.
-Bank-pipe directions follow an automatic schedule. Exact phases, amounts, payment
-timing, response obligations and anti-pile-on rules remain open. Do not present these adaptations as history.
+Bank-pipe directions follow one incoming phase then one outgoing phase per day.
+Interbank replies are prepared the next working day after receipt; delivery may
+be later. Processing limits, exact amounts, payment timing and anti-pile-on rules
+remain open. Do not present these adaptations as history.
 
 ## Historical reference
 
