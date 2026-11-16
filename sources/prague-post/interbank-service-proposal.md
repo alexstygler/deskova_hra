@@ -28,3 +28,17 @@ Do not assume a bank-to-bank letter occupies a public one-pipe branch: the suppo
 2. Should the responding bank receive a small processing fee?
 
 Do not describe the service as implemented or historically established. Keep the raw idea and the assistant’s recommendation distinct.
+
+
+## Adopted direction — 16 November 2026
+
+The designer now explicitly prioritizes enjoyment and concrete game rules over
+pinpoint historical fidelity, adopting one bidirectional pipe per player bank
+as a game simplification. Useful interbank business may incidentally hurt the
+other bank, and the replying bank earns a processing fee. The earlier assessment
+above remains dated development history: the core service direction and recipient
+fee are now chosen, while fee payer, timing, response obligations, recipient
+workload/credits and repeat-target protection remain unresolved. No mandatory
+credit drain, same-day replan or historically verified private pipe count is
+established. Next questions: whether requests become next-morning work and who
+funds the responding bank's fee.

@@ -4,6 +4,16 @@ The user is designing an original physical board game for approximately 2–9 pl
 Read `aktualni-hra.html` and the current sections of `zapisnik.html` before proposing rules; archived ideas
 and external research are not automatically current decisions.
 
+## Historical freedom in game design
+
+The designer explicitly prioritizes enjoyment and clear rules over exact historical
+operation. Use the history as inspiration and label game adaptations; historical
+uncertainty does not require pausing or rejecting an authorized game rule. The
+chosen game model gives each player bank one bidirectional pipe to Jindřišská.
+Useful interbank business is allowed to incidentally disadvantage a rival; the
+replying bank earns a processing fee. Exact fee payer, timing, workload and
+anti-pile-on rules remain open. Do not present these adaptations as history.
+
 ## Historical reference
 
 On 12 November 2026 the user designated
