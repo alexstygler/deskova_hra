@@ -51,3 +51,11 @@ the next morning’s plan. Transport delays still affect arrival. With no user
 preference on who pays, use requester-paid recipient fees as a starting rule.
 Amount, payment timing, recipient credit usage, mandatory response and direction
 control remain open. This updates the earlier pending questions above.
+
+
+## Response resource and direction decisions
+
+The designer chooses processing time and pipe access only, without extra recipient
+credits. Bank-pipe directions follow an automatic schedule. Exact phase count,
+priority, processing time and mandatory versus deferrable reply handling remain
+open. Player-chosen action order still applies within the eventual timetable.
