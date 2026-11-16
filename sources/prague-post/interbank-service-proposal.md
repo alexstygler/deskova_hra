@@ -42,3 +42,12 @@ workload/credits and repeat-target protection remain unresolved. No mandatory
 credit drain, same-day replan or historically verified private pipe count is
 established. Next questions: whether requests become next-morning work and who
 funds the responding bank's fee.
+
+
+## Next-morning handling and fee funding
+
+The designer confirms that requests actually received become known work before
+the next morning’s plan. Transport delays still affect arrival. With no user
+preference on who pays, use requester-paid recipient fees as a starting rule.
+Amount, payment timing, recipient credit usage, mandatory response and direction
+control remain open. This updates the earlier pending questions above.

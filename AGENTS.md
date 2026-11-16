@@ -11,8 +11,9 @@ operation. Use the history as inspiration and label game adaptations; historical
 uncertainty does not require pausing or rejecting an authorized game rule. The
 chosen game model gives each player bank one bidirectional pipe to Jindřišská.
 Useful interbank business is allowed to incidentally disadvantage a rival; the
-replying bank earns a processing fee. Exact fee payer, timing, workload and
-anti-pile-on rules remain open. Do not present these adaptations as history.
+replying bank earns a processing fee. Requests become next-morning work after receipt. The user delegated fee funding;
+use requester-paid recipient fees as the starting rule. Exact amounts, payment
+timing, workload/credits and anti-pile-on rules remain open. Do not present these adaptations as history.
 
 ## Historical reference
 
