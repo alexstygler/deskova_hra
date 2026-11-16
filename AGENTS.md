@@ -1,7 +1,7 @@
 # Project continuity
 
 The user is designing an original physical board game for approximately 2–9 players.
-Read the current sections of `index.html` before proposing rules; archived ideas
+Read `aktualni-hra.html` and the current sections of `zapisnik.html` before proposing rules; archived ideas
 and external research are not automatically current decisions.
 
 ## Historical reference
@@ -56,3 +56,13 @@ when `sources/prague-post/mapa/manifest.json` is present. Rebuilding the DOCX
 transcription must preserve that map section.
 When replacing the map PDF, run `python scripts/build_map_source.py` first
 (requires PyMuPDF), then rebuild the source HTML.
+
+## Site performance and homepage
+
+`zapisnik.html` is the full design notebook. Edit the short overview in
+`aktualni-hra.html`, then run `python scripts/build_current_overview.py` to
+sync the lightweight `index.html` homepage. Preserve the old-anchor forwarding.
+Use original source assets for downloads, smaller derivatives for inline images.
+After replacing source assets, run `python scripts/build_source_previews.py`
+(requires Pillow), then rebuild the source page. Preview hashes prevent stale
+images from silently replacing newer originals.

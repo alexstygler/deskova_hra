@@ -22,6 +22,16 @@ NS = {
 }
 W, R = NS['w'], NS['r']
 manifest_path = ASSETS / 'manifest.json'
+preview_manifest_path = ASSETS / 'preview-manifest.json'
+previews = json.loads(preview_manifest_path.read_text()) if preview_manifest_path.exists() else {}
+
+def image_tag(url, alt):
+    item = previews.get(url, {})
+    current = item and hashlib.sha256((ROOT / url).read_bytes()).hexdigest() == item['source_sha256']
+    src = item['preview'] if current else url
+    dimensions = f' width="{item["width"]}" height="{item["height"]}"' if current else ''
+    return f'<img src="{escape(src, quote=True)}" alt="{escape(alt, quote=True)}"{dimensions} loading="lazy" decoding="async">'
+
 previous_images = set()
 if manifest_path.exists():
     previous_images = {item['path'] for item in json.loads(manifest_path.read_text()).get('images', [])}
@@ -73,7 +83,7 @@ with ZipFile(DOCX) as z:
                 image_path.write_bytes(data)
                 url = f'sources/prague-post/images/{filename}'
                 images.append({'path': url, 'sha256': hashlib.sha256(data).hexdigest()})
-                output.append(f'<a href="{url}" target="_blank" rel="noopener"><img src="{url}" alt="{escape(caption or filename, quote=True)}" loading="lazy" decoding="async"></a>')
+                output.append(f'<a href="{url}" target="_blank" rel="noopener">{image_tag(url, caption or filename)}</a>')
             return ''.join(output)
         content = ''.join(inline(child, caption) for child in node)
         if local == 'hyperlink':
@@ -158,7 +168,7 @@ if map_manifest_path.exists():
         transcript = escape((ROOT / entry['text']).read_text())
         figures.append(f'''<figure id="mapa-strana-{number}">
           <figcaption><h3>Strana {number}: {title}</h3></figcaption>
-          <a href="{preview}" target="_blank" rel="noopener"><img src="{preview}" alt="Strana {number}: {title}. Úplné PDF a textový přepis jsou dostupné v této sekci." loading="lazy" decoding="async"></a>
+          <a href="{preview}" target="_blank" rel="noopener">{image_tag(entry['image'], f'Strana {number}: {entry["title"]}. Úplné PDF a textový přepis jsou dostupné v této sekci.')}</a>
           <p><a href="{pdf_url}#page={number}" target="_blank" rel="noopener">Otevřít stranu {number} v PDF</a> · <a href="{preview}" target="_blank" rel="noopener">Zvětšit náhled</a></p>
           <details><summary>Textový přepis strany {number}</summary><pre class="map-transcript">{transcript}</pre></details>
         </figure>''')
@@ -205,6 +215,7 @@ page = '''<!doctype html>
     .document-title { font-size: 1.6rem; font-weight: 700; } .subtitle { font-size: 1.15rem; }
     .citations,.caption { font-size: .9rem; color: #526756; }
     .caption { margin-top: 6px; } .source-image { margin-top: 24px; }
+    .source-image { content-visibility: auto; contain-intrinsic-size: auto 900px; }
     .source-image img { display: block; width: auto; max-width: 100%; height: auto; margin: auto; }
     #mapa-podklad figure { margin: 24px 0; }
     #mapa-podklad img { display: block; max-width: 100%; height: auto; border: 1px solid #d8dfd3; }
@@ -220,8 +231,8 @@ page = '''<!doctype html>
 </head>
 <body>
   <nav class="site-tabs" aria-label="Záložky webu">
-    <a href="aktualni-hra.html">Current gameplay</a>
-    <a href="index.html">Herní zápisník</a>
+    <a href="index.html">Current gameplay</a>
+    <a href="zapisnik.html">Herní zápisník</a>
     <a href="zdrojove-materialy.html" aria-current="page">Zdrojové materiály</a>
   </nav>
   <header>
@@ -245,7 +256,7 @@ page = '''<!doctype html>
 ''' + rendered + '''
     </article>
   </main>
-  <footer><p>Zdroj: Prazska_potrubni_posta.docx, opravená verze dodaná autorem hry 12. listopadu 2026. Text, pořadí, tabulky, ''' + str(len(images)) + ''' vložení obrázků a zdrojové odkazy jsou převedeny z aktuálního dokumentu; jeho originál zůstává dostupný ke stažení. Tato záložka obsahuje zdrojový materiál, nikoli hotová herní pravidla.</p><p><a href="#">Zpět nahoru</a> · <a href="index.html">Zpět do herního zápisníku</a></p></footer>
+  <footer><p>Zdroj: Prazska_potrubni_posta.docx, opravená verze dodaná autorem hry 12. listopadu 2026. Text, pořadí, tabulky, ''' + str(len(images)) + ''' vložení obrázků a zdrojové odkazy jsou převedeny z aktuálního dokumentu; jeho originál zůstává dostupný ke stažení. Tato záložka obsahuje zdrojový materiál, nikoli hotová herní pravidla.</p><p><a href="#">Zpět nahoru</a> · <a href="zapisnik.html">Zpět do herního zápisníku</a></p></footer>
 </body>
 </html>
 '''
