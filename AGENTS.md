@@ -37,6 +37,11 @@ are reached. Keep confirmed user choices separate from assistant proposals and
 untested claims. Preserve prior work and the original source. Updating and pushing
 the notebook to this GitHub repository has already been authorized.
 
+The user requests every response to end with the next focused design question,
+unless they ask otherwise. Maintain `aktualni-hra.html` as the concise current
+gameplay summary, separating confirmed choices from illustrative flow, open
+rules, and parked ideas. Keep long research and earlier proposals in the notebook.
+
 Use the existing checkout. Keep discussion focused on one next question unless
 the user explicitly requests a broader brainstorm. There is no playable game yet.
 

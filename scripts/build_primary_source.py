@@ -220,6 +220,7 @@ page = '''<!doctype html>
 </head>
 <body>
   <nav class="site-tabs" aria-label="Záložky webu">
+    <a href="aktualni-hra.html">Current gameplay</a>
     <a href="index.html">Herní zápisník</a>
     <a href="zdrojove-materialy.html" aria-current="page">Zdrojové materiály</a>
   </nav>
