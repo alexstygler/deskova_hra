@@ -69,3 +69,14 @@ not guarantee delivery to their original sender that day. The processing-time
 constraint, central transfers and overload handling remain open. With unlimited
 letters per capsule, pipe access alone may not create meaningful competition;
 preparation slots and final processing are next questions, not adopted rules.
+
+
+## Timing revision under exploration — 17 November 2026
+
+The designer proposes that incoming morning service defers an otherwise early
+dispatch to afternoon, potentially reducing same-day reach. The earlier fixed
+incoming-then-outgoing schedule therefore needs revision; if every morning is
+always incoming, an additional letter does not cause that delay. Conditional
+early dispatch and destination cutoff markers are proposals, not selected rules.
+Preparation slots remain unchosen. Required replies complete a case automatically
+on return; no final processing slot is required.
