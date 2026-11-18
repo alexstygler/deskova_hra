@@ -11,7 +11,7 @@
 <body>
 <nav class="site-tabs" aria-label="Website tabs"><a href="aktualni-hra.html" aria-current="page">Current gameplay</a><a href="zapisnik.html">Design notebook</a><a href="zdrojove-materialy.html">Historical sources</a></nav>
 <header>
-<p class="eyebrow">The short version · updated <time datetime="2026-11-17">17 November 2026</time></p>
+<p class="eyebrow">The short version · updated <time datetime="2026-11-18">18 November 2026</time></p>
 <h1>Run your bank through Prague’s pneumatic post.</h1>
 <p class="intro">Choose worthwhile business tasks, send requests across one shared map, and bring the replies home. Earn money from completed business while paying for the correspondence.</p>
 <div class="facts"><span>2–9 players · target</span><span>40–50 minutes · target</span><span>Individual competition</span><span>1936/37 · working setting</span></div>
@@ -21,13 +21,13 @@
 <section class="confirmed" id="decided">
 <h2>What we have decided</h2>
 <ul>
-<li><strong>Everyone represents a bank.</strong> Players use one shared Prague map. Each player bank has one bidirectional pipe to Jindřišská in the game; direction is automatic. The earlier incoming-then-outgoing schedule is being reconsidered against two morning/afternoon opportunities; the revised direction rule is not yet chosen. The exact bank roster is still open.</li>
+<li><strong>Everyone represents a bank.</strong> Players use one shared Prague map. Each player bank has one bidirectional pipe to Jindřišská in the game; direction is automatic. Incoming mail can occupy either dispatch window. If it occupies both, outgoing mail waits overnight. The exact direction and priority rules are open. The exact bank roster is still open.</li>
 <li><strong>History inspires the game.</strong> We may adapt it for enjoyable play and clear rules; game adaptations stay distinct from historical claims.</li>
 <li><strong>Interbank business creates interaction.</strong> A useful request may occupy a rival’s pipe or response time as a side effect. The replying bank earns a processing fee, paid by the requesting bank as our starting rule. After actual receipt, the request becomes work for the next morning, visible before planning. Replying uses processing time and pipe access, with no extra recipient credits. Interbank replies are prepared on the next working day after receipt. Exact fees, processing time and overload rules remain open.</li>
 <li><strong>Success is measured in Kč.</strong> Completed business earns income; postal expenses reduce what you keep.</li>
 <li><strong>You choose from a personal selection of specific business tasks.</strong> New offers arrive each morning. Unaccepted offers remain available until their shown expiry; exact lifetimes and offer counts remain open.</li>
 <li><strong>Plan the whole day together.</strong> Everyone chooses all actions for one game day simultaneously in secret. Everyone reveals their complete plan at once, then plans play out publicly. Accepted tasks are visible. Players also choose the order of their actions. Conflict-resolution rules remain open.</li>
-<li><strong>Timing and credits limit your workload.</strong> Capsules have no letter-count limit in the game. Credits pay for handling business tasks, with more demanding cases requiring more effort; money pays postage. Batching letters saves postage without removing the handling cost of each task. Pay a task’s full handling cost upfront when starting it; reply processing is covered. Everyone starts each morning with the standard credit budget; unused credits do not accumulate. Exact amounts remain open.</li>
+<li><strong>Timing and credits limit your workload.</strong> Capsules have no letter-count limit in the game. Credits pay for handling business tasks, with more demanding cases requiring more effort; money pays postage. Batching letters saves postage without removing the handling cost of each task. The upfront handling cost covers reply processing. Posting is the action, with no separate letter preparation. Credits reset daily. A blocked dispatch’s credit timing and the daily credit split are open.</li>
 <li><strong>Several short working days.</strong> Each day has a new simultaneous secret planning phase, a full reveal and public resolution. The number of days is undecided.</li>
 <li><strong>Cases continue overnight.</strong> Unfinished tasks and correspondence carry into the next day; most tasks are expected to span several days. Their upfront handling cost is not charged again solely because a day ends. Exact durations remain open.</li>
 <li><strong>Urgent and flexible tasks.</strong> Some tasks have their own deadlines; others only need to finish before the game ends. Late urgent income decreases with growing delay, either daily or in time bands. The exact amounts, intervals and minimum income remain open.</li>
@@ -58,7 +58,7 @@
 <h2>Still to decide</h2>
 <ul>
 <li>How ordered daily plans are represented and resolved; exact timing and conflict rules.</li>
-<li>How correspondence moves and competing dispatches resolve.</li>
+<li>How message type, destination and traffic affect movement, and who gets priority when plans collide.</li>
 <li>Task selection size, replacement and active-case limits.</li>
 <li>Exact credit costs, monetary rewards, response-time units and late-income reductions.</li>
 <li>How many days to play, how overnight mail progresses, final-day unfinished cases and ties.</li>
@@ -71,18 +71,16 @@
 <p><strong>Calendar scenario:</strong> the designer notes that several days could span 1 March 1937. The research reports messenger charges rising from 1 to 2 Kč in the inner delivery zone and falling from 5 to 2 Kč in the outer zone; the public 40-h pneumatic surcharge stayed unchanged. Exact zones and which service uses each rate still need care. This scenario is an option, not yet a mandatory event. Its date and charges are announced before planning begins.</p>
 
 <p><strong>Price-change experiment:</strong> test whether a case started before the rise but completed afterwards incurs a monetary surcharge, potentially making it dearer than starting after the rise. Compare this with charging new prices only for services used after the change. This is a fictional game-cost experiment, not a verified historical unfinished-case penalty. Values and triggers are undecided; do not implement it yet.</p>
-<p><strong>Bank workday:</strong> explore whether ordinary banking work makes correspondence ready early or late, possibly with replies prepared before new requests. Shared dispatch windows are not chosen. Any reply workload must respect the handling cost already paid upfront. <a href="sources/prague-post/research-prompt-bank-workday-1937.md">Research prompt: 24 February–3 March 1937</a>.</p>
-<p><strong>Morning/afternoon direction idea:</strong> incoming mail could occupy the morning pipe and push outgoing letters to the afternoon, possibly missing a destination’s delivery cutoff. If every morning is always incoming, that affects everyone equally and does not create extra delay from another bank’s request. Explore allowing morning dispatch when no incoming service is due. Preparation slots are not adopted; the pipe model may provide the needed time constraint.</p>
-<p><strong>Interbank details:</strong> useful requests and a replying-bank fee are chosen. The requester pays the fee as our starting rule; a received request joins the next morning’s workload. Replies cost the recipient time and pipe access, not extra credits; direction follows an automatic schedule. Next-working-day reply preparation is chosen. The earlier fixed phase rule is now under review; direction timing, processing limits and repeated-overload protection remain open. <a href="sources/prague-post/interbank-service-proposal.md">Original idea and development notes</a>.</p>
+<p><strong>Bank workday:</strong> Banking workloads and dated public events may shape the day. Shared event timing and the use of historical examples remain open. <a href="sources/prague-post/research-prompt-bank-workday-1937.md">Research prompt: 24 February–3 March 1937</a>.</p>
+<p><strong>Morning/afternoon direction idea:</strong> For example, a bank could get 3 credits in the morning and 2 more in the afternoon. Morning credits could be used to dispatch early or saved for a larger or cheaper combined capsule later. The suggested 40 h capsule charge and the credit amounts are values to test.</p>
+<p><strong>Interbank details:</strong> useful requests and a replying-bank fee are chosen. The requester pays the fee as our starting rule; a received request joins the next morning’s workload. Replies cost the recipient time and pipe access, not extra credits; direction follows an automatic schedule. Interbank replies are due for handling the working day after receipt. The new dispatch windows may affect when those replies leave. <a href="sources/prague-post/interbank-service-proposal.md">Original idea and development notes</a>.</p>
 <p><strong>Service options:</strong> prepaid fast replies with a waiting messenger; express delivery; single- and double-pipe operation; a scenario spanning the tariff change.</p>
 <p class="muted">These options are recorded, not adopted mechanics. Historical availability and prices need period-specific evidence.</p>
 </section>
 </div>
 <section class="next" id="next">
-<p class="eyebrow">Our next two questions</p>
-<h2>Can an empty incoming window become an early dispatch?</h2>
-<ol><li>If no incoming mail needs the morning pipe, may the bank dispatch then, with afternoon dispatch available otherwise?</li><li>Should a destination have a simple early-dispatch requirement for same-day delivery, or should we track letters at intermediate positions?</li></ol>
-<p>These interbank implementation details remain open. We will continue with two focused questions per reply.</p>
+<h2>Current design work</h2>
+<p>The designer is developing a draft of the rules. We will refine and playtest it together. <a href="zapisnik.html#round-priority">Options for who goes first after each round</a>.</p>
 </section>
 <section id="principles">
 <h2>The experience we are aiming for</h2>
@@ -91,6 +89,6 @@
 <p><a href="zapisnik.html#research-1936-1937">Read the research assessment</a> · <a href="zdrojove-materialy.html#mapa-podklad">See the historical network map</a></p>
 </section>
 </main>
-<footer>This page is our current summary. Earlier ideas, detailed discussions and research stay in the <a href="zapisnik.html">design notebook</a>. We continue with two focused questions per reply.</footer>
+<footer>This page is our current summary. Earlier ideas, detailed discussions and research stay in the <a href="zapisnik.html">design notebook</a>.</footer>
 </body>
 </html>

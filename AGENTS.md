@@ -13,11 +13,11 @@ chosen game model gives each player bank one bidirectional pipe to Jindřišská
 Useful interbank business is allowed to incidentally disadvantage a rival; the
 replying bank earns a processing fee. Requests become next-morning work after receipt. The user delegated fee funding;
 use requester-paid recipient fees as the starting rule. The recipient uses processing time and pipe access, not extra daily credits.
-Bank-pipe direction is automatic. The earlier fixed incoming-then-outgoing daily
-schedule is under review: the designer proposes morning/afternoon opportunities
-where incoming mail can defer an otherwise early outgoing dispatch. No conditional
-direction rule is confirmed. Preparation slots are not adopted. Returned required
-replies complete the requesting bank’s case automatically.
+Bank-pipe direction is automatic. The current draft allows incoming mail in
+either dispatch window. Both windows can be blocked, delaying outgoing mail
+overnight. Posting is the action. There is no separate preparation action or
+preparation slot. Staggered credits (3 + 2 as an example), routing and the exact
+priority rules are open. Returning required replies complete cases automatically.
 Interbank replies are prepared the next working day after receipt; delivery may
 be later. Processing limits, exact amounts, payment timing and anti-pile-on rules
 remain open. Do not present these adaptations as history.
@@ -55,13 +55,11 @@ are reached. Keep confirmed user choices separate from assistant proposals and
 untested claims. Preserve prior work and the original source. Updating and pushing
 the notebook to this GitHub repository has already been authorized.
 
-The user requests every response to end with two focused design questions,
-unless they ask otherwise. Maintain `aktualni-hra.html` as the concise current
-gameplay summary, separating confirmed choices from illustrative flow, open
-rules, and parked ideas. Keep long research and earlier proposals in the notebook.
-
-Use the existing checkout. Continue with two focused questions per reply, as requested by the user;
-use broader brainstorming only when requested. There is no playable game yet.
+The designer now leads rules design and will bring a draft for joint refinement
+and playtesting. Answer questions they bring, especially about history, and
+pause routine design questions. Maintain `aktualni-hra.html` as a concise
+summary that distinguishes decisions from proposals. Preserve research and
+earlier proposals in the notebook. Use the existing checkout.
 
 ## Source page
 
